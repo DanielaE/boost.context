@@ -22,6 +22,10 @@
 #include <boost/context/all.hpp>
 #include <boost/context/detail/config.hpp>
 
+#if defined(BOOST_MSVC)
+#pragma warning(disable: 4723) // potential division by zero
+#endif
+
 typedef boost::variant<int,std::string> variant_t;
 
 namespace ctx = boost::context;
