@@ -34,8 +34,9 @@
 #endif
 
 #if defined(BOOST_MSVC)
-# pragma warning(push)
 # pragma warning(disable: 4723)
+# pragma warning(disable: 4702)
+# pragma warning(disable: 4996)
 #endif
 
 typedef boost::variant<int,std::string> variant_t;
@@ -650,7 +651,3 @@ boost::unit_test::test_suite * init_unit_test_suite( int, char* [])
 
     return test;
 }
-
-#if defined(BOOST_MSVC)
-# pragma warning(pop)
-#endif

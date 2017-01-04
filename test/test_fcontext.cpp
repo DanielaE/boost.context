@@ -23,6 +23,10 @@
 #include <boost/context/detail/config.hpp>
 #include <boost/context/detail/fcontext.hpp>
 
+#ifdef BOOST_MSVC
+# pragma warning(disable: 4996)
+#endif
+
 template< std::size_t Max, std::size_t Default, std::size_t Min >
 class simple_stack_allocator
 {
